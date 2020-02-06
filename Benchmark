@@ -13,5 +13,11 @@ int main(){
     for (int32_t i = 0; i < a; i++){
       n = 2.0 + 2.0;
     }
+   
+   int b = 5 * pow(10, 10);
+    float m;
+    for (int32_t i = 0; i < b; i++){
+      m = 2 * 2;
+    }
     
 }
