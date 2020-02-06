@@ -5,21 +5,38 @@
 using namespace std;
 
 int main(){
-    clock_t start, end;
-    int64_t cpu_time_used;
-    start = clock();
-    int a = pow(10,11);
-    float n;
-    for (int32_t i = 0; i < a; i++){
-      n = 2.0 + 2.0;
+    time_t start, end;
+    time(&start);
+
+    
+    int n;
+    for (long i = 0; i < 10000000; i++){
+        n = 2 + 2;
+				cout << "add";
+			// declaring argument of time() 
+    		time_t my_time = time(NULL); 
+  
+    	// ctime() used to give the present time 
+    cout << ctime(&my_time); 
+				//100000000000
     }
-   int b = 5 * pow(10, 10);
-    float m;
-    for (int32_t i = 0; i < b; i++){
-      m = 2 * 2;
-    }
-    end = clock();
-    cpu_time_used = ((double)(end - start))/ CLOCKS_PER_SEC;
-    cout << "Time Used\n" << cpu_time_used;
+
+    // int m;
+    // for (long i = 0; i < 50000000000 ; i++){
+    //     m = 2 * 2;
+		// 		cout << "mult";
+		// 		//50000000000
+    // }
+
+    // int l;
+    // for (long i = 0; i < 20000000000; i++){
+    //     l = 2/2;
+		// 		cout << "div";
+		// 		//20000000000
+    // }
+    
+    time(&end);
+		double difference = difftime (end,start);
+		cout << "The time it took is " << difference;
     return 0;
 }
